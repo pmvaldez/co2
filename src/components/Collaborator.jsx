@@ -9,6 +9,9 @@ import {
     Input
 } from 'antd';
 import Navbar from './Navbar';
+import data from '../BD/data.json'
+
+const factor = data.factores.factor
 
 const { Option } = Select;
 
@@ -38,7 +41,7 @@ const Collaborator = () => {
             {...formItemLayout}
             onFinish={onFinish}
             initialValues={{
-            'inputr': 3,
+            'inputr': 1,
             }}
         >
         <Form.Item

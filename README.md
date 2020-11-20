@@ -20,7 +20,11 @@ plataforma, facilitando asi la contabilización de la huella de carbono producid
 En tanto al diseño de la interfaz de diseño aplique el framework AntDesingn.
 
 ## Mejoras:
-*Culminar la interfaz por el lado del administrador.
-*Agregar variables de entorno para mejorar la seguridad en el sitio.
-*Conexion con Google maps API.
-*Generar cálculo automático de la distancia entre direcciones.
+⦁ Culminar la interfaz por el lado del administrador.
+⦁ Agregar variables de entorno para mejorar la seguridad en el sitio.
+⦁ Conexion con Google maps API.
+⦁ Generar cálculo automático de la distancia entre direcciones.
+
+
+## Autora
+ 💻 [Paula Valdez](https://github.com/pmvaldez)

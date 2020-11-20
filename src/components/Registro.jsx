@@ -65,27 +65,27 @@ const Registro = () => {
 
     return (
         <Fragment>
-
             {
                 validation === false ?
                     (
-                            <form onSubmit={procesarDatos} className="form-signin">
-                                <div className="text-center mb-4">
-        <img className="mb-4" src={logo} alt="" width="150" height="150"/>
-        <h1 className="h3 mb-3 font-weight-normal">Huella de carbono</h1>
-        <p>Build form controls with floating labels via the pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, Firefox, and IE 10/11 (prefixed).</a></p>
-      </div>
-      <div className="form-label-group">
+                        <form onSubmit={procesarDatos} className="form-signin">
+                            <div className="text-center mb-4">
+                                <img className="mb-4" src={logo} alt="" width="150" height="150"/>
+                                <h1 className="h3 mb-3 font-weight-normal">Huella de carbono</h1>
+                                <p>Es Nuestro compromiso y responsabilidad cuidar el medio ambiente.</p>
+                            </div>
+                            <div className="form-label-group">
                                 <input
                                     className="form-control" 
                                     placeholder="Usuario"
                                     required autofocus
                                     type="email"
                                     onChange={e => setEmail(e.target.value)}
-                                    value={email}/>
-                                    <label for="inputEmail">Email address</label>
-                                    </div>
-                                    <div className="form-label-group">
+                                    value={email}
+                                />
+                                <label for="inputEmail">Email address</label>
+                            </div>
+                            <div className="form-label-group">
                                 <input
                                     className="form-control"
                                     placeholder="Contraseña"
@@ -95,24 +95,21 @@ const Registro = () => {
                                     value={pass}
                                 />
                                 <label for="inputPassword">Password</label>
-                                </div>
-                                <div className="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"/> Remember me
-        </label>
-      </div>
-                                <button
-                                    className="btn btn-lg btnsing btn-block"
-                                    onClick={() => register()}
-                                >Registrar</button>
-                            </form>
+                            </div>
+                            <div className="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"/> Remember me
+                                </label>
+                            </div>
+                            <button
+                                className="btn btn-lg btnsing btn-block"
+                                onClick={() => register()}
+                            >Registrar</button>
+                        </form>
                     ) : <Redirect push to="/Home" />
-
             }
-
-
         </Fragment>
-    )
+        )
 }
 
 export default Registro

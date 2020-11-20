@@ -20,43 +20,43 @@ const Home = () => {
                         <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#FF5757"/></svg>
                         <div className="container">
                             <div className="carousel-caption text-left">
-                                <h1>Huella de Carbono</h1>
+                                <h1 style={{color:'#f3f4f5'}}>Huella de Carbono</h1>
                                 <p>La huella de carbono puede ser abordada dependiendo del enfoque o alcance específico. Para cada uno de estos enfoques existen diferentes protocolos o metodologías reconocidas internacionalmente</p>
-                                <p><a className="btn btn-lg btn-primary" href="https://mma.gob.cl/cambio-climatico/cc-02-7-huella-de-carbono/" role="button">Ver mas</a></p>
+                                <p><a className="btn btn-lg btnHome" href="https://mma.gob.cl/cambio-climatico/cc-02-7-huella-de-carbono/" role="button">Ver mas</a></p>
                             </div>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#004AAD"/></svg>
+                        <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#195FBD"/></svg>
                         <div className="container">
                             <div className="carousel-caption">
-                                <h1>Another example headline.</h1>
+                                <h1 style={{color:'#f3f4f5'}}>Another example headline.</h1>
                                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                <p><a className="btn btn-lg btn-primary" href="/Login" role="button">Learn more</a></p>
+                                <p><a className="btn btn-lg btnHome" href="/Login" role="button">Learn more</a></p>
                             </div>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#545454"/></svg>
+                        <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#F47C00"/></svg>
                         <div className="container">
                         <div className="carousel-caption text-right">
-                            <h1>One more for good measure.</h1>
+                            <h1 style={{color:'#f3f4f5'}}>One more for good measure.</h1>
                             <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a className="btn btn-lg btn-primary" href="/Login" role="button">Browse gallery</a></p>
+                            <p><a className="btn btn-lg btnHome" href="/Login" role="button">Browse gallery</a></p>
                         </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container marketing">
-                <div class="row">
-                    <div class="col-lg-4">
+            <div className="container marketing">
+                <div className="row">
+                    <div className="col-lg-4">
                     <img src={imgOne} alt="" class="bd-placeholder-img rounded-circle" width="200" height="200" preserveAspectRatio="xMidYMid slice" focusable="false"/>
-                        <p><a class="btn btn-secondary" href="/MiHuella" role="button">Mide tu Huella &raquo;</a></p>
+                        <p><a className="btn btnHome" href="/MiHuella" role="button">Mide tu Huella &raquo;</a></p>
                     </div>
-                    <div class="col-lg-4">
+                    <div className="col-lg-4">
                         <img src={imgTwo} alt="" class="bd-placeholder-img rounded-circle" width="200" height="200" preserveAspectRatio="xMidYMid slice" focusable="false"/>
-                        <p><a class="btn btn-secondary" href="/Consultancy" role="button">Nuestro Historial &raquo;</a></p>
+                        <p><a className="btn btnHome" href="/Consultancy" role="button">Nuestro Historial &raquo;</a></p>
                     </div>
                 </div>
             </div>

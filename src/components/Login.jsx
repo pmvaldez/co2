@@ -65,9 +65,7 @@ const Login = () => {
                             <div className="text-center mb-4">
                                 <img className="mb-4" src={logo} alt="" width="150" height="150"/>
                                 <h1 className="h3 mb-3 font-weight-normal">Huella de carbono</h1>
-                                <p>Build form controls with floating labels via the pseudo-element. 
-                                    <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, Firefox, and IE 10/11 (prefixed).</a>
-                                </p>
+                                <p>Es Nuestro compromiso y responsabilidad cuidar el medio ambiente.</p>
                             </div>
                             <div className="form-label-group">
                                 <input

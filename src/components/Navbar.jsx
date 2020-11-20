@@ -18,6 +18,9 @@ function Navbar() {
                 <li className="nav-item">
                 <a className="nav-link" href="./MiHuella">Mi Huella</a>
                 </li>
+                <li className="nav-item">
+                <a className="nav-link" href="./MiHuella">Salir</a>
+                </li>
             </ul>
         </div>
     </nav>

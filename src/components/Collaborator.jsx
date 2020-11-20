@@ -128,7 +128,7 @@ const Collaborator = () => {
           }}
         >
           <Button type="primary" htmlType="submit">
-            Submit
+            Enviar
           </Button>
         </Form.Item>
       </Form>

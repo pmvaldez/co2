@@ -1,0 +1,60 @@
+{
+    "factores": 
+    [
+        {
+            "id": "01",
+            "medio": "Tren",
+            "factor": 0.033,
+            "count": 1,
+            "type": "Metro"
+        },{
+            "id": "02",
+            "medio": "Gasolina",
+            "factor": 0.21,
+            "count": 2,
+            "type": "Auto"
+        },{
+            "id": "03",
+            "medio": "Diesel",
+            "factor": 0.249,
+            "count": 3,
+            "type": "Camioneta"
+        },{
+            "id": "04",
+            "medio": "Gasolina",
+            "factor": 0.092,
+            "count": 4,
+            "type": "Motocicleta"
+        },{
+            "id": "05",
+            "medio": "Transporte Publico",
+            "factor": 0.039,
+            "count": 5,
+            "type": "Transantiago"
+        },{
+            "id": "06",
+            "medio": "Vehiculo Privado",
+            "factor": 0.012,
+            "count": 6,
+            "type": "Bus"
+        },{
+            "id": "07",
+            "medio": "Nacional",
+            "factor": 0.279,
+            "count": 7,
+            "type": "Avion"
+        },{
+            "id": "08",
+            "medio": "Internacional",
+            "factor": 0.179,
+            "count": 8,
+            "type": "Avion"
+        }, {
+            "id": "09",
+            "medio": "Caminando",
+            "factor": 0,
+            "count": 9,
+            "type": "Caminando"
+        }
+    ]
+}

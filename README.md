@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# CO2
+***
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Preámbulo :mag:
+El principal problema de la emergencia climática a la que nos enfrentamos hoy es generada
+por el aumento de temperatura del planeta, lo que desencadena catástrofes como alza en
+las mareas, sequías, inundaciones y muchos efectos devastadores. Este aumento de
+temperatura se debe al efecto invernadero generado por la acumulación excesiva de CO2
+en la atmósfera, que es generado en gran parte por distintas industrias.
+Hoy las empresas cada día toman más conciencia en los efectos del medio ambiente, es
+por ello, que hacen medición de su huella de carbono, la cual mide el CO2 que genera
+cualquier tipo acción, ya sea la producción manufacturera de ropa, la producción de carnes
+o incluso el carbono que producen las personas, la huella de carbono se usa para medir el
+CO2 generado y principalmente para tratar de disminuir o mitigar el carbono generado.
 
-## Available Scripts
+## Resumen del proyecto :pencil:
+Proyecto realizado en Reactjs y Firebase en el cual se realiza un
+sitio web que se encarga de registar y almacenar los datos de viajes enviados a traves de la 
+plataforma, facilitando asi la contabilización de la huella de carbono producida en cada viaje realizado.
+En tanto al diseño de la interfaz de diseño aplique el framework AntDesingn.
 
-In the project directory, you can run:
+## Mejoras:
+⦁ Culminar la interfaz por el lado del administrador.
+⦁ Agregar variables de entorno para mejorar la seguridad en el sitio.
+⦁ Conexion con Google maps API.
+⦁ Generar cálculo automático de la distancia entre direcciones.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Autora
+ 💻 [Paula Valdez](https://github.com/pmvaldez)

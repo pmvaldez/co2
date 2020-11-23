@@ -19,10 +19,20 @@ sitio web que se encarga de registar y almacenar los datos de viajes enviados a 
 plataforma, facilitando asi la contabilización de la huella de carbono producida en cada viaje realizado.
 En tanto al diseño de la interfaz de diseño aplique el framework AntDesingn.
 
+## Uso
+
+Para instalar, debes ejecutar:
+
+#### `npm install`
+
+#### `npm start`
+
 ## Mejoras:
-⦁ Culminar la interfaz por el lado del administrador.
+
 ⦁ Agregar variables de entorno para mejorar la seguridad en el sitio.
+
 ⦁ Conexion con Google maps API.
+
 ⦁ Generar cálculo automático de la distancia entre direcciones.
 
 

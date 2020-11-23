@@ -19,6 +19,22 @@ sitio web que se encarga de registar y almacenar los datos de viajes enviados a 
 plataforma, facilitando asi la contabilización de la huella de carbono producida en cada viaje realizado.
 En tanto al diseño de la interfaz de diseño aplique el framework AntDesingn.
 
+## Base de Datos
+
+Se generaron dos colecciones que se encargan de almacenar:
+
+⦁ Users: Informacion del usuario (Email, Fecha de creacion y un IUD unico para la organizacion de la informacion).
+
+⦁ Almacenamiento: Informacion suministrada por los usuarios que guarda para su posterior uso (Nombre, Direccion
+de partida y llegada, Tipo de transpporte, Km recorrido, Cant de Empleados, Fecha de creacion(hora) y total de la
+Huella recorrida. 
+
+![Screenshotpaleta](src/img/almc.PNG)
+
+⦁ Interfaz del sitio desplegado:
+
+![Screenshotpaleta](src/img/interfaz.PNG)
+
 ## Uso
 
 Para instalar, debes ejecutar:

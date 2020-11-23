@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
 import '../style/Home.css'
 import imgOne from '../img/imgOne.jpg'
 import imgTwo from '../img/imgTwo.jpg'
@@ -7,7 +6,6 @@ import imgTwo from '../img/imgTwo.jpg'
 const Home = () => {
     return (
         <div >
-            <Navbar/>
             <br/>
             <div id="myCarousel" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
@@ -52,11 +50,11 @@ const Home = () => {
                 <div className="row">
                     <div className="col-lg-4">
                     <img src={imgOne} alt="" class="bd-placeholder-img rounded-circle" width="200" height="200" preserveAspectRatio="xMidYMid slice" focusable="false"/>
-                        <p><a className="btn btnHome" href="/MiHuella" role="button">Mide tu Huella &raquo;</a></p>
+                        <p><a className="btn btnHome" href="./MiHuella" role="button">Mide tu Huella &raquo;</a></p>
                     </div>
                     <div className="col-lg-4">
                         <img src={imgTwo} alt="" class="bd-placeholder-img rounded-circle" width="200" height="200" preserveAspectRatio="xMidYMid slice" focusable="false"/>
-                        <p><a className="btn btnHome" href="/Consultancy" role="button">Nuestro Historial &raquo;</a></p>
+                        <p><a className="btn btnHome" href="./Historial" role="button">Nuestro Historial &raquo;</a></p>
                     </div>
                 </div>
             </div>

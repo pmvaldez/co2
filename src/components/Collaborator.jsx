@@ -1,140 +1,119 @@
 import React from 'react'
 import 'antd/dist/antd.css';
+import {db, auth} from '../BD/firebase';
+import '../style/collaborator.css';
 import {
     Form,
-    Select,
-    InputNumber,
-    Radio,
-    Button,
-    Input
+    Input,
 } from 'antd';
-import Navbar from './Navbar';
-import data from '../BD/data.json'
-
-const factor = data.factores.factor
-
-const { Option } = Select;
-
-const formItemLayout = {
-  labelCol: {
-    span: 6,
-  },
-  wrapperCol: {
-    span: 14,
-  },
-};
+import conversionFactor from '../BD/factor';
 
 
 const Collaborator = () => {
-    
-    const onFinish = (values) => {
-        console.log('Received values of form: ', values);
-    };
 
-    return (
-        <div >
-            <Navbar/>
-            <br/><br/><br/><br/><br/>
-            <div style={{margin:'18px%'}}>
-        <Form 
-            name="validate_other"
-            {...formItemLayout}
-            onFinish={onFinish}
-            initialValues={{
-            'inputr': 1,
-            }}
-        >
-        <Form.Item
-            name="select"
-            label="Punto de Partida"
-            hasFeedback
-            rules={[
-                {
-                required: true,
-                message: 'Ups! Falta un punto de partida',
-                },
-            ]}
-            >
-            <Input />
-        </Form.Item>
-        <Form.Item
-            name="select"
-            label="Punto de LLegada"
-            hasFeedback
-            rules={[
-                {
-                required: true,
-                message: 'Ups! Falta un punto de llegada',
-                },
-            ]}
-            >
-            <Input />
-        </Form.Item>
+  const [datos, setDatos] = React.useState({
+    employees: '',
+    startPoint: '',
+    endPoint: '',
+    typeTransport: 0,
+    kilometers: 0,
+    numberOfEmployees: 0,
+    typeTravel: 0,
+  })
+
+  const [result, setResult] = React.useState(0)
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setDatos({
+      employees: '',
+      startPoint: '',
+      endPoint: '',
+      typeTransport: 0,
+      kilometers: 0,
+      numberOfEmployees: 0,
+      typeTravel: 0
+    })
+  }
+
+  const setValueOnChange = event => {
+    setDatos({
+      ...datos,
+      [event.target.name]: event.target.value
+    });
+  }
+
+  const setResultOnChange = event => {
+    const value = event.target.value;
+    setDatos({
+      ...datos,
+      [event.target.name]: value
+    });
+    setResult(Boolean(result) ? result * parseFloat(value) : parseInt(value));    
+  }
   
-        <Form.Item
-          name="select-multiple"
-          label="Medio de Transporte"
-          rules={[
-            {
-              required: true,
-              message: 'Ups! Selecciona un medio de transporte',
-              type: 'array',
-            },
-          ]}
-        >
-          <Select mode="multiple">
-            <Option value="Auto">Auto</Option>
-            <Option value="Camioneta">Camioneta</Option>
-            <Option value="BusPri">Bus (Vehiculo Privado)</Option>
-            <Option value="BusPub">Bus Transantiago</Option>
-            <Option value="Metro">Metro</Option>
-            <Option value="Motocicleta">Motocicleta</Option>
-            <Option value="AvionI">Avion Internacional</Option>
-            <Option value="AvionN">Avion Nacional</Option>
-            <Option value="Caminando">Caminando</Option>
-          </Select>
+//Enviando datos a firebase
+const agregaDatos= async (e) => {
+  e.preventDefault()
+  try {
+    const newDatos = {
+      nombre: datos.employees,
+      partida: datos.startPoint,
+      llegada: datos.endPoint,
+      kilometraje: datos.kilometers,
+      transporte: datos.typeTransport,
+      cantEmpleados: datos.numberOfEmployees,
+      idaVuelta: datos.typeTravel,
+      TotalCo2: result,
+      hora: new Date(),
+      uid: auth.currentUser.uid
+    }
+
+    const data = await db.collection("almacenamiento").add(newDatos);
+    console.log(data)
+  } 
+  catch (error) {
+    console.log(error)
+  }
+} 
+  return (     
+    <div className="collaborator-wrapper ">
+      <Form  onSubmit={handleSubmit}>
+      <Form.Item label="Nombre">
+          <Input type="text" name="employees" onChange={setValueOnChange}/>
         </Form.Item>
-  
-        <Form.Item label="Can de Personas en el viaje">
-          <Form.Item name="inputr" noStyle>
-            <InputNumber min={1} max={10} />
-          </Form.Item>
-          <span className="ant-form-text"> Personas</span>
+        <Form.Item label="Punto de Partida">
+          <Input type="text" name="startPoint" onChange={setValueOnChange}/>
         </Form.Item>
-        <Form.Item
-            name="select"
-            label="Kilometraje"
-            hasFeedback
-            rules={[
-                {
-                required: true,
-                message: 'Ups! Falta el kilometraje',
-                },
-            ]}
-            >
-            <Input />
+        <Form.Item label="Punto de LLegada">
+          <Input type="text" name="endPoint" onChange={setValueOnChange}/>
         </Form.Item>
-        <Form.Item name="radio-group" label="Radio.Group">
-          <Radio.Group>
-            <Radio value="2">Ida y vuelta</Radio>
-            <Radio value="1">Solo Ida</Radio>
-          </Radio.Group>
+        <Form.Item label="Kilometraje"> 
+          <Input type="number" name="kilometers" onChange={setResultOnChange}/>
         </Form.Item>
-  
-        <Form.Item
-          wrapperCol={{
-            span: 12,
-            offset: 6,
-          }}
-        >
-          <Button type="primary" htmlType="submit">
-            Enviar
-          </Button>
+        <Form.Item label="Medio de Transporte">
+          <select name="typeTransport" onChange={setResultOnChange}>
+            {conversionFactor.map(({label, value}) => {               
+              return <option value={value}>{label}</option>
+            })}
+          </select>
         </Form.Item>
-      </Form>
+        <Form.Item label="Cant de Empleados">
+          <Input type="number" name="numberOfEmployees" onChange={setResultOnChange}/>
+        </Form.Item>
+        <Form.Item label="Solo Ida">
+          <Input type="radio" name="typeTravel" value="1" onChange={setResultOnChange}/>
+        </Form.Item>
+        <Form.Item label="Ida y Vuelta">
+          <Input type="radio" name="typeTravel" value="2" onChange={setResultOnChange}/>
+        </Form.Item>
+          <button type="submit" onClick={agregaDatos}>Enviar</button>
+      </Form> 
+      <div>
+        <h2> Tu huella total es:  { result}</h2>
       </div>
-      </div>
-    )
+   </div>
+  )
 }
 
 export default Collaborator
